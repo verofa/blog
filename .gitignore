@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+
+# VitePress build output and cache
+docs/.vitepress/dist
+docs/.vitepress/cache
+
+# OS files
+.DS_Store
+
+# Environment Variables
+.env
+.env.local
