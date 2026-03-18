@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "💜 The Purple Terminal"
-  text: "A developer blog for curious minds"
+  text: "A DevOps blog for curious minds"
   tagline: "🦄 Writing about DevOps, SRE, terminal hacks, tools and everything I learn along the way 👩🏽‍💻"
   actions:
     - theme: brand

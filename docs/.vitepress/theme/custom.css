@@ -3,4 +3,7 @@
   --vp-c-brand-2: #7b2fbe;
   --vp-c-brand-3: #6b2fa0;
   --vp-c-brand-soft: rgba(107, 47, 160, 0.14);
+
+  /* Configuring Space Grotesk font */
+  --vp-font-family-base: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }

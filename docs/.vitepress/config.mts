@@ -6,8 +6,24 @@ export default defineConfig({
   description:
     "🦄 My corner of the Internet. Writing about DevOps, SRE, tools and specially things I learn, since sharing is caring",
 
-  // Dark mode by default — matches your terminal!
+  // Dark mode by default
   appearance: "dark",
+
+  // ── Head  ──
+  head: [
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
+    [
+      "link",
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossorigin: "" },
+    ],
+    [
+      "link",
+      {
+        href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap",
+        rel: "stylesheet",
+      },
+    ],
+  ],
 
   themeConfig: {
     // ── Navigation ──────────────────────────────
@@ -84,7 +100,7 @@ export default defineConfig({
   },
 
   // ── Purple theme colors ───────────────────────
-  // Matches your Ghostty terminal palette!
+  // The Purple terminal palette!
   vite: {
     css: {
       preprocessorOptions: {
