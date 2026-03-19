@@ -31,7 +31,8 @@ ghostty --version
 ```
 
 > [!IMPORTANT]
-> Ghostty requires macOS 12 or later.
+> Ghostty requires macOS 12 or later and to install the cask you need to have
+> [Homebrew installed]
 
 ---
 
@@ -213,3 +214,4 @@ _Found this helpful? Share it with a fellow terminal enthusiast! 💜_
 [eza]: https://eza.rocks/
 [Neovim]: https://neovim.io/
 [Ghostty's config]: https://ghostty.org/docs/config
+[Homebrew installed]: https://github.com/verofa/dotfiles/blob/main/SETUP.md#2-homebrew
