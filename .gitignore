@@ -11,3 +11,7 @@ docs/.vitepress/cache
 # Environment Variables
 .env
 .env.local
+
+# Ignore large image files (optional)
+docs/public/**/*.psd
+docs/public/**/*.ai

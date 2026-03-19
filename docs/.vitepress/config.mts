@@ -84,7 +84,7 @@ export default defineConfig({
     // ── Footer ───────────────────────────────────
     footer: {
       message: "Built with 💜 and VitePress",
-      copyright: `Copyright © ${new Date().getFullYear()} The Purple Terminal`,
+      copyright: `${new Date().getFullYear()} The Purple Terminal`,
     },
 
     // ── Search ───────────────────────────────────

@@ -7,3 +7,17 @@
   /* Configuring Space Grotesk font */
   --vp-font-family-base: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
+
+/* ── Purple headlines ───────────────────────── */
+.vp-doc h1 {
+  color: #7b2fbe;
+}
+
+.vp-doc h2 {
+  color: #9d5fe0;
+  border-top: 1px solid #d0c0ee; /* subtle purple divider */
+}
+
+.vp-doc h3 {
+  color: #a855f7;
+}

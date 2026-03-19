@@ -23,10 +23,15 @@ I chose `Ghostty` because:
 ## 📦 Installation
 
 ```fish
-# Install via Homebrew
+# Open a terminal and install it via Homebrew
 brew install --cask ghostty
+```
 
-# Verify
+When the installation finish, close the terminal and open a new terminal session from Ghostty:
+Open Spotlight Search and type Ghostty (or press Command (⌘) + Space and type Ghostty)
+
+```fish
+# Check version
 ghostty --version
 ```
 
@@ -35,6 +40,12 @@ ghostty --version
 > [Homebrew installed]
 
 ---
+
+## Customisation
+
+At the end of the following instructions your `Ghostty` terminal will look like this:
+
+![Ghostty terminal](/ghostty-setup/ghostty-terminal.png)
 
 ## 🔤 Fonts: Install JetBrainsMono Nerd Font
 
@@ -152,6 +163,8 @@ that looks great with dark backgrounds.
 ---
 
 ## 🖥️ The Result
+
+![Ghostty fastfetch](/ghostty-setup/system-info.png)
 
 With this config you get:
 
