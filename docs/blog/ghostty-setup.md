@@ -4,11 +4,15 @@ _Published: March 2026 · 8 min read · Tags: `ghostty` `terminal` `macos` `setu
 
 ---
 
-If you spend most of your day in a terminal, you deserve one that looks and feels amazing. In this post I'll walk you through how I set up **Ghostty** — a fast, modern terminal emulator — with a custom purple theme, transparency effects, and all the tweaks that make it a joy to use every day.
+If you spend most of your day in a terminal, you deserve one that looks and feels amazing.
+In this post I'll walk you through how I set up **[Ghostty]** (a fast, modern terminal emulator)
+with a custom purple theme, transparency effects, and all the tweaks that make it a joy to use
+every day.
 
 ## 🤔 Why Ghostty?
 
-There are a lot of terminal emulators out there — iTerm2, Alacritty, Warp, Kitty. I chose Ghostty because:
+There are a lot of terminal emulators out there e.g., **iTerm2**, **Alacritty**, **Warp**, **Kitty**.
+I chose `Ghostty` because:
 
 - ⚡ **Blazing fast**: written in Zig, native performance
 - 🎨 **Highly customisable**: colors, fonts, opacity, blur
@@ -26,13 +30,15 @@ brew install --cask ghostty
 ghostty --version
 ```
 
-> ℹ️ Ghostty requires macOS 12 or later.
+> [!IMPORTANT]
+> Ghostty requires macOS 12 or later.
 
 ---
 
-## 🔤 Fonts — Install JetBrainsMono Nerd Font
+## 🔤 Fonts: Install JetBrainsMono Nerd Font
 
-Before configuring Ghostty, install a **Nerd Font**. These are regular fonts patched with thousands of extra icons used by Starship, Neovim and eza.
+Before configuring `Ghostty`, install a **Nerd Font**. These are regular fonts patched with thousands
+of extra icons used by [Starship], [Neovim] and [eza].
 
 ```fish
 # Install via Homebrew
@@ -50,25 +56,21 @@ cp ~/Downloads/JetBrainsMono/*.ttf ~/Library/Fonts/
 ```
 
 > ✅ You can verify the font is installed by opening **Font Book** and searching for "JetBrainsMono".
+>
+> Open `Finder`, navigate to the `Applications` folder, and select `Font Book.`
 
 ---
 
 ## ⚙️ Configuration
 
-Ghostty's config file lives at:
+[Ghostty's config] file lives at (macOS only):
 
 ```
-~/.config/ghostty/config
+$HOME/Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
+$HOME/Library/Application\ Support/com.mitchellh.ghostty/config
 ```
 
-Create it if it doesn't exist:
-
-```fish
-mkdir -p ~/.config/ghostty
-nvim ~/.config/ghostty/config
-```
-
-Here's my complete config with explanations for every setting:
+Here is my complete `config` with explanations for every setting:
 
 ```ini
 # ── Font ──────────────────────────────────────
@@ -128,13 +130,15 @@ palette = 15=#F4F2FF          # near-white
 
 ## 🎨 Understanding the Color Palette
 
-The color palette controls how your terminal renders colors when apps use the 16 standard ANSI colors. For example:
+The color palette controls how your terminal renders colors when apps use the 16 standard ANSI
+colors. For example:
 
 - Colors 0-7 are **normal** colors
 - Colors 8-15 are **bright** variants
 - Color 1 = red (used for errors), Color 2 = green (used for success), etc.
 
-I pixel-matched these colors from a reference screenshot to get a cohesive purple-toned palette that looks great with dark backgrounds.
+I pixel matched these colors to get a cohesive purple toned palette
+that looks great with dark backgrounds.
 
 > 💡 **Tip:** You can preview your palette by running:
 >
@@ -151,7 +155,7 @@ I pixel-matched these colors from a reference screenshot to get a cohesive purpl
 With this config you get:
 
 - 💜 Deep purple background with frosted glass transparency
-- 🔤 JetBrainsMono with icons for Starship and eza
+- 🔤 **JetBrainsMono** with icons for [Starship] and [eza]
 - ✨ Smooth blur effect showing your desktop through the terminal
 - 🎨 A cohesive purple color palette throughout
 
@@ -203,3 +207,9 @@ Or jump straight to the [full setup guide](/setup-guide) to get everything runni
 ---
 
 _Found this helpful? Share it with a fellow terminal enthusiast! 💜_
+
+[Ghostty]: https://ghostty.org
+[Starship]: https://starship.rs/
+[eza]: https://eza.rocks/
+[Neovim]: https://neovim.io/
+[Ghostty's config]: https://ghostty.org/docs/config
