@@ -84,58 +84,167 @@ $HOME/Library/Application\ Support/com.mitchellh.ghostty/config
 
 Here is my complete `config` with explanations for every setting:
 
+> [!TIP]
+> If you want to try it, you can download it into your configuration location, and test it:
+>
+> ```fish
+> curl \
+> "https://raw.githubusercontent.com/verofa/dotfiles/refs/heads/main/Library/Application%20Support/com.mitchellh.ghostty/config" -o ./config
+> ```
+
 ```ini
-# ── Font ──────────────────────────────────────
+# =====================================================================
+#  Ghostty Configuration — High Contrast / Professional Theme
+#  macOs Location:
+#  ~/Library/Application Support/com.mitchellh.ghostty/config
+#  or
+#  /Library/Application\ Support/com.mitchellh.ghostty/config.ghostty
+#  Linux Location:
+#  ~/.config/ghostty/config
+#
+#  Ghostty docs:     https://ghostty.org/docs/config
+#  Show all options: ghostty +show-config --default --docs
+#
+#  Syntax quick-reference:
+#    key = value       # basic assignment
+#    key =             # reset to default
+#    # comment         # whole-line comment only (no inline comments)
+# =====================================================================
+
+# -- Font -------------------------------------------------------------
+#  Primary font is JetBrains Mono with Nerd Font patching (adds icons
+#  used by tools like Starship, Neovim plugins, etc.).
+#  Font features enabled:
+#    calt  – contextual alternates (e.g. arrow ligatures: ->  =>)
+#    liga  – standard ligatures
+#    ss01/ss02 – stylistic sets (variant letterforms, varies by font)
+#  font-thicken renders glyphs slightly bolder on macOS Retina screens.
+
 font-family = "JetBrainsMono Nerd Font"
 font-size = 13.5
-font-thicken = true          # slightly bolder, easier on the eyes
-adjust-cell-height = 10%     # a bit more line spacing
+font-feature = calt
+font-feature = liga
+font-feature = ss01
+font-feature = ss02
+font-thicken = true
 
-# ── Cursor ────────────────────────────────────
-cursor-style = block         # block cursor (bar also available)
-cursor-color = #F0EEF8       # near-white cursor
-cursor-text = #1a1b26        # dark text on cursor
+# -- Cursor -----------------------------------------------------------
+#  A non-blinking bar cursor (|) is less distracting than a block.
+#  The hot-pink cursor (#f95470) contrasts sharply against the dark
+#  background, making it easy to locate at a glance.
+#  cursor-text sets the colour of the character *under* the cursor.
 
-# ── Background ────────────────────────────────
-background = #260f48          # deep purple
-background-opacity = 0.90     # frosted glass effect
-background-blur-radius = 20   # gaussian blur behind window
+cursor-style        = bar
+cursor-style-blink  = false
+cursor-color        = #f95470
+cursor-text         = #1a1b26
 
-# ── Foreground ────────────────────────────────
-foreground = #c9cfeb          # lavender-white text
+# -- Window & Decorations ---------------------------------------------
+#  Generous padding (18 px horizontal, 14 px vertical) keeps text
+#  away from the window edges — easier on the eyes during long sessions.
+#  macos-titlebar-style = transparent blends the title bar into the
+#  terminal background for a cleaner, full-bleed look.
+#  resize-overlay = never suppresses the size pop-up when dragging
+#  the window border.
 
-# ── Selection ─────────────────────────────────
-selection-background = #4E4870
-selection-foreground = #F4F2FF
+window-padding-x         = 18
+window-padding-y         = 14
+window-decoration        = true
+window-title-font-family = "Berkeley Mono"
+macos-titlebar-style     = transparent
+resize-overlay           = never
 
-# ── macOS ─────────────────────────────────────
-macos-titlebar-style = transparent   # seamless titlebar
-window-padding-x = 12
-window-padding-y = 8
+# -- Base Colors ------------------------------------------------------
+#  Deep purple background (#260f48) with slight transparency (0.90)
+#  lets the desktop bleed through subtly. background-blur-radius = 20
+#  smooths whatever is behind the window (macOS vibrancy-style effect).
+#  The foreground is a neutral light grey (#C0C0C0) — bright enough
+#  for legibility without the eye-strain of pure white.
 
-# ── Shell integration ─────────────────────────
-shell-integration = fish      # enables prompt marks, better scrollback
+background              = #260f48
+background-opacity      = 0.90
+background-blur-radius  = 20
+foreground              = #C0C0C0
 
-# ── Color palette ─────────────────────────────
-# Normal colors (0-7)
-palette = 0=#3D3B6B           # dark indigo
-palette = 1=#A0566A           # dusty rose
-palette = 2=#E8745A           # coral orange
-palette = 3=#D4A828           # golden yellow
-palette = 4=#8B72D4           # medium purple
-palette = 5=#6B6AAA           # slate blue-purple
-palette = 6=#6ED8B4           # soft mint
-palette = 7=#DDDAF0           # near-white
+# Commented-out foreground alternatives — uncomment to try:
+# foreground = #E8EAF0   # slightly bluer white
+# foreground = #C8C0DC   # warm lavender tint
+# foreground = #c9cfeb   # soft periwinkle
 
-# Bright colors (8-15)
-palette = 8=#7B6FB8           # medium purple
-palette = 9=#F0A0C0           # bubblegum pink
-palette = 10=#E83870          # hot pink-red
-palette = 11=#E0B830          # golden yellow
-palette = 12=#AA98E8          # lavender
-palette = 13=#8888BB          # muted slate
-palette = 14=#88E8E0          # sky cyan
-palette = 15=#F4F2FF          # near-white
+# -- 16-Colour Palette ------------------------------------------------
+#  Terminals use a fixed palette of 16 colours (indices 0–15).
+#  Indices 0–7  are the "normal" colours.
+#  Indices 8–15 are the "bright" variants (used for bold text, etc.).
+#
+#  This palette leans into a vibrant neon-on-dark aesthetic while
+#  keeping contrast ratios high for readability.
+
+# Backgrounds, borders, inactive elements
+palette = 0=#1C2333
+palette = 8=#3B4560
+
+# Errors, git deletions, warnings
+palette = 1=#ef919b
+palette = 9=#FF6B82
+
+# Success, git additions, OK status
+palette = 2=#00E676
+palette = 10=#52FF9A
+
+# Warnings, modified files, highlights
+palette = 3=#FFD600
+palette = 11=#FFE44D
+
+# Directories, prompts, links
+palette = 4=#88E8E0
+palette = 12=#6EA6FF
+
+# Special files, tags, decorators
+palette = 5=#E040FB
+palette = 13=#EA80FC
+
+# Strings, info messages
+palette = 6=#dd95aa
+palette = 14=#EA80FC
+
+# Normal text, foreground fallback
+palette = 7=#C9D1E8
+palette = 15=#FFFFFF
+
+# --- Selection -------------------------------------------------------
+#  Dark navy selection background with pure white text ensures
+#  selected text remains fully legible against any content.
+
+selection-background = #1E3A5F
+selection-foreground = #FFFFFF
+
+# -- Scrollback -------------------------------------------------------
+#  Stores up to 10,000 lines of output above the visible viewport.
+#  Increase if you regularly work with long build logs or verbose output.
+
+scrollback-limit = 10000
+
+# -- Shell Integration --------------------------------------------------
+#  Ghostty has native integration with Fish shell. This enables:
+#  cursor  – shell reports its mode (insert/normal) so the cursor
+#              shape changes automatically (bar in insert, block in normal)
+#  sudo    – passes terminal info through sudo sessions
+#  title   – sets the window title to the current command / directory
+
+shell-integration          = fish
+shell-integration-features = cursor,sudo,title
+
+# -- Miscellaneous Behaviour -----------------------------------------------
+# confirm-close-surface = false - close tabs/windows instantly, no dialog.
+# focus-follows-mouse   = false - focus only changes on click, not hover.
+# copy-on-select        = false - text is NOT auto-copied when highlighted;
+#                                 requires an explicit Cmd+C / right-click.
+# clipboard-trim-trailing-spaces - strips trailing whitespace when copying,
+#                                  avoiding invisible characters in pastes.
+confirm-close-surface          = false
+focus-follows-mouse            = false
+copy-on-select                 = false
+clipboard-trim-trailing-spaces = true
 ```
 
 ---
@@ -198,12 +307,6 @@ Cmd + N
 
 ```
 Cmd + Ctrl + F
-```
-
-**Clear scrollback:**
-
-```fish
-clear && tput reset
 ```
 
 ---
