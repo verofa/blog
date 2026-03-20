@@ -24,6 +24,6 @@ features:
   - icon: 🚀
     title: The Complete Purple Terminal Setup Guide
     details: Step by step instructions to set up the full developer terminal environment on a fresh macOS machine. Neovim, Fish shell, Starship prompt and eza, all included!
-    link: /purple-terminal-setup
+    link: /blog/purple-terminal-setup
     linkText: Get started
 ---

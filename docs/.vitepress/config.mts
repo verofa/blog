@@ -7,8 +7,10 @@ export default defineConfig({
     "🦄 My corner of the Internet. Writing about DevOps, SRE, tools and specially things I learn, since sharing is caring",
   base: "/blog/",
 
-  // Dark mode by default
-  // appearance: "dark",
+  // Light mode by default and allowing the user change the theme
+  appearance: {
+    initialValue: "light",
+  },
 
   // ── Head  ──
   head: [
