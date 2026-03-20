@@ -28,12 +28,12 @@ jobs:
       - name: Fetch docs from dotfiles repo
         run: |
           git clone https://github.com/verofa/dotfiles /tmp/dotfiles
-          cp /tmp/dotfiles/SETUP.md docs/purple-terminal-setup.md
+          cp /tmp/dotfiles/SETUP.md docs/blog/purple-terminal-setup.md
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
           cache: npm
 
       - name: Install dependencies
