@@ -313,13 +313,10 @@ Cmd + Ctrl + F
 
 ## 🔗 What's Next?
 
-Now that you have a beautiful terminal, the next steps are:
+Now that you have the terminal, if you like it and want a functional, colorful, and fun development
+environment, the next step is:
 
-- 🐟 [Set up Fish shell with cloud CLI shortcuts](/blog/fish-shell-cloud-cli)
-- 🚀 [Configure Starship prompt](/blog/starship-config)
-- 💎 [Set up Neovim from scratch](/blog/neovim-setup)
-
-Or jump straight to the [full setup guide](/setup-guide) to get everything running at once!
+- 👾 [Complete the full Purple Terminal configuration](/blog/purple-termial-setup)
 
 ---
 

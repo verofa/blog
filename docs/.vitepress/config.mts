@@ -5,6 +5,7 @@ export default defineConfig({
   title: "The Purple Terminal",
   description:
     "🦄 My corner of the Internet. Writing about DevOps, SRE, tools and specially things I learn, since sharing is caring",
+  //  base: "/blog/",
 
   // Dark mode by default
   appearance: "dark",
@@ -30,9 +31,6 @@ export default defineConfig({
     nav: [
       { text: "🏠 Home", link: "/" },
       { text: "📝 Blog", link: "/blog/" },
-      { text: "🛠️ Setup Guide", link: "/setup-guide" },
-      { text: "⚙️ Config", link: "/config/" },
-      { text: "🔧 Troubleshooting", link: "/troubleshooting" },
     ],
 
     // ── Sidebar ──────────────────────────────────
@@ -46,33 +44,9 @@ export default defineConfig({
               link: "/blog/ghostty-setup",
             },
             {
-              text: "Fish Shell — Cloud CLI shortcuts",
-              link: "/blog/fish-shell-cloud-cli",
+              text: "Full Purple Terminal configuration",
+              link: "/blog/purple-terminal-setup",
             },
-            {
-              text: "Starship prompt configuration",
-              link: "/blog/starship-config",
-            },
-            { text: "Neovim from scratch", link: "/blog/neovim-setup" },
-            {
-              text: "Fixing nvim-treesitter v1 changes",
-              link: "/blog/nvim-treesitter-v1",
-            },
-            {
-              text: "Neovim LSP — Migrating to 0.11",
-              link: "/blog/nvim-lsp-0-11",
-            },
-          ],
-        },
-      ],
-      "/config/": [
-        {
-          text: "⚙️ Config Files",
-          items: [
-            { text: "Ghostty", link: "/config/ghostty" },
-            { text: "Fish Shell", link: "/config/fish" },
-            { text: "Starship", link: "/config/starship" },
-            { text: "Neovim", link: "/config/neovim" },
           ],
         },
       ],
