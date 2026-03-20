@@ -8,7 +8,7 @@ export default defineConfig({
   base: "/blog/",
 
   // Dark mode by default
-  appearance: "dark",
+  // appearance: "dark",
 
   // ── Head  ──
   head: [

@@ -27,8 +27,17 @@ jobs:
       # --- Pull files from dotfiles repo ---
       - name: Fetch docs from dotfiles repo
         run: |
+          echo "Cloning dotfiles repo..."
           git clone https://github.com/verofa/dotfiles /tmp/dotfiles
-          cp /tmp/dotfiles/SETUP.md docs/blog/purple-terminal-setup.md
+
+          echo "Listing cloned files..."
+          ls -la /tmp/dotfiles
+
+          echo "Copying SETUP.md..."
+          cp /tmp/dotfiles/SETUP.md docs/blog/purple-terminal-setup.md && echo " 🦄SETUP.md copied" || echo " 💩SETUP.md failed"
+
+          echo "Listing docs folder..."
+          ls -la docs/ ; ls -la docs/blog/
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
