@@ -5,7 +5,7 @@ export default defineConfig({
   title: "The Purple Terminal",
   description:
     "🦄 My corner of the Internet. Writing about DevOps, SRE, tools and specially things I learn, since sharing is caring",
-  //  base: "/blog/",
+  base: "/blog/",
 
   // Dark mode by default
   appearance: "dark",
