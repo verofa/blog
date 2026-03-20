@@ -29,7 +29,6 @@ jobs:
         run: |
           git clone https://github.com/verofa/dotfiles /tmp/dotfiles
           cp /tmp/dotfiles/SETUP.md docs/purple-terminal-setup.md
-          cp /tmp/dotfiles/README.md docs/dotfiles-readme.md
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
