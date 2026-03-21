@@ -57,57 +57,9 @@ The Purple Terminal is a personal developer blog focused on:
 This blog follows a **docs-as-code** approach, content is written in Markdown, version controlled
 in Git and automatically deployed via CI/CD.
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                        CONTENT SOURCES                          │
-│                                                                 │
-│  ┌─────────────────────┐      ┌──────────────────────────────┐  │
-│  │   verofa/blog repo  │      │   verofa/dotfiles repo       │  │
-│  │                     │      │                              │  │
-│  │  docs/              │      │         SETUP.md             │  │
-│  │  ├── blog/          │      │                              │  │
-│  │  ├── config/        │      │                              │  │
-│  │  └── public/        │      │                              │  │
-│  └──────────┬──────────┘      └──────────────┬───────────────┘  │
-│             │                                │                  │
-└─────────────┼────────────────────────────────┼──────────────────┘
-              │                                │
-              ▼                                ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                     GITHUB ACTIONS (CI/CD)                      │
-│                                                                 │
-│  Trigger: push to main branch                                   │
-│                                                                 │
-│  ┌──────────────────────────────────────────────────────────┐   │
-│  │  BUILD JOB                                               │   │
-│  │                                                          │   │
-│  │  1. Checkout blog repo                                   │   │
-│  │  2. Clone dotfiles repo → copy SETUP.md + README.md      │   │
-│  │  3. Setup Node.js 24                                     │   │
-│  │  4. npm ci (install dependencies)                        │   │
-│  │  5. npm run docs:build (VitePress build)                 │   │
-│  │  6. Upload artifact (docs/.vitepress/dist)               │   │
-│  └──────────────────────────┬───────────────────────────────┘   │
-│                             │                                   │
-│  ┌──────────────────────────▼───────────────────────────────┐   │
-│  │  DEPLOY JOB                                              │   │
-│  │                                                          │   │
-│  │  7. Deploy artifact to GitHub Pages                      │   │
-│  └──────────────────────────────────────────────────────────┘   │
-│                                                                 │
-└─────────────────────────────┬───────────────────────────────────┘
-                              │
-                              ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                        GITHUB PAGES                             │
-│                                                                 │
-│  https://verofa.github.io/blog                                  │
-│                                                                 │
-│  Static files served directly from GitHub's CDN                │
-│  Automatic HTTPS via GitHub                                     │
-│                                                                 │
-└─────────────────────────────────────────────────────────────────┘
-```
+<p align="center">
+<img src="images/cicd-diagram.svg" alt="Tiny-URL-Architecture" style="width:80%; height:auto;">
+</p>
 
 ### How it works step by step
 
