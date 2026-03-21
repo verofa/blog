@@ -54,7 +54,7 @@ The Purple Terminal is a personal developer blog focused on:
 
 ## 🏗️ System Design
 
-This blog follows a **docs-as-code** approach, content is written in Markdown, version controlled
+This blog follows a **docs as code** approach, content is written in Markdown, version controlled
 in Git and automatically deployed via CI/CD.
 
 <p align="center">
