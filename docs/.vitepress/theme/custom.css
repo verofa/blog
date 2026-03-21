@@ -21,3 +21,44 @@
 .vp-doc h3 {
   color: #a855f7;
 }
+/* Change VitePress defaut Hero layout (two colums) to use full width */
+
+.VPHero .container {
+  display: block !important;
+}
+
+.VPHero .main {
+  width: 100% !important;
+  max-width: 100% !important;
+  /* text-align: center !important;*/
+  text-align: left !important;
+}
+
+.VPHero .image {
+  display: none !important;
+}
+
+/* ---- Adjust text sizes to fit one line ----- */
+/* These field values come from docs/index.md */
+.VPHero .name {
+  font-size: 3rem !important;
+  line-height: 1.2 !important;
+  white-space: nowrap !important;
+}
+
+.VPHero .text {
+  font-size: 2rem !important;
+  line-height: 1.3 !important;
+  white-space: nowrap !important;
+}
+
+.VPHero .tagline {
+  font-size: 1.1rem !important;
+  max-width: 100% !important;
+  text-align: left !important;
+}
+
+/* ---  the action buttons ------------- */
+.VPHero .actions {
+  justify-content: flex-start !important;
+}
