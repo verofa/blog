@@ -61,7 +61,16 @@ export default defineConfig({
       "/blog/system-design/": [
         {
           text: "🏗️ System Design",
-          items: [{ text: "Coming soon...", link: "/blog/system-design/" }],
+          items: [
+            {
+              text: "🌟 Overview",
+              link: "/blog/system-design/",
+            },
+            {
+              text: "🔗 TinyURL",
+              link: "/blog/system-design/tiny-url",
+            },
+          ],
         },
       ],
       "/blog/coding/": [
