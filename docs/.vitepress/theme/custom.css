@@ -8,7 +8,7 @@
   --vp-font-family-base: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
 }
 
-/* ── Purple headlines ───────────────────────── */
+/* -- Purple headlines ------------------------- */
 .vp-doc h1 {
   color: #7b2fbe;
 }
@@ -61,4 +61,19 @@
 /* ---  the action buttons ------------- */
 .VPHero .actions {
   justify-content: flex-start !important;
+}
+
+/* -- Feature card titles ---------------------- */
+.VPFeature .title {
+  color: #7b2fbe !important;
+}
+
+/* -- Feature card link text ------------------- */
+.VPFeature .linkText {
+  color: #4f45b8 !important;
+}
+
+/* -- Feature card hover effect ---------------- */
+.VPFeature:hover {
+  border-color: #7b2fbe !important;
 }
