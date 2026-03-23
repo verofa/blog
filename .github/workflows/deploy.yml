@@ -70,7 +70,7 @@ jobs:
           find docs/blog/system-design -name "*.md"
 
           echo "🦄 Copied image folders:"
-          find docs/blog/system-design -type d -name "images"
+          find docs/blog/system-design
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
