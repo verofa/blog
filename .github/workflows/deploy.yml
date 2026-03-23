@@ -63,7 +63,7 @@ jobs:
           find /tmp/systems-design -type d -name "images" | while read image_dir; do
             relative="${image_dir#/tmp/systems-design/}"
             mkdir -p "docs/blog/system-design/$relative"
-            cp -r "$d/." "docs/blog/system-design/$relative/"
+            cp -r "$image_dir"/* "docs/blog/system-design/$relative/"
           done
 
           echo "🦄 Copied markdown files:"
