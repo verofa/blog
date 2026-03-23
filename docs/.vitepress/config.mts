@@ -37,23 +37,40 @@ export default defineConfig({
 
     // ── Sidebar ──────────────────────────────────
     sidebar: {
-      "/blog/": [
+      "/blog/terminal/": [
         {
-          text: "📝 Blog Posts",
+          text: "👻 Terminal & Tools",
           items: [
             {
               text: "Setting up Ghostty on macOS",
-              link: "/blog/ghostty-setup",
+              link: "/blog/terminal/ghostty-setup",
             },
             {
-              text: "Full Purple Terminal configuration",
-              link: "/blog/purple-terminal-setup",
+              text: "Full Purple Terminal Configuration",
+              link: "/blog/terminal/purple-terminal-setup",
             },
           ],
         },
       ],
+      "/blog/devops/": [
+        {
+          text: "☁️ SRE / DevOps / Platform Engineering",
+          items: [{ text: "Coming soon...", link: "/blog/devops/" }],
+        },
+      ],
+      "/blog/system-design/": [
+        {
+          text: "🏗️ System Design",
+          items: [{ text: "Coming soon...", link: "/blog/system-design/" }],
+        },
+      ],
+      "/blog/coding/": [
+        {
+          text: "💻 Coding",
+          items: [{ text: "Coming soon...", link: "/blog/coding/" }],
+        },
+      ],
     },
-
     // ── Social links ─────────────────────────────
     socialLinks: [{ icon: "github", link: "https://github.com/verofa" }],
 
