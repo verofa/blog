@@ -36,7 +36,7 @@ jobs:
           ls -la /tmp/dotfiles
 
           echo "Copying SETUP.md..."
-          cp /tmp/dotfiles/SETUP.md docs/blog/purple-terminal-setup.md && echo " 🦄SETUP.md copied" || echo " 💩SETUP.md failed"
+          cp /tmp/dotfiles/SETUP.md docs/blog/terminal/purple-terminal-setup.md && echo " 🦄SETUP.md copied" || echo " 💩SETUP.md failed"
 
           echo "Listing docs folder..."
           ls -la docs/ ; ls -la docs/blog/
