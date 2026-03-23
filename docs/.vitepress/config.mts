@@ -68,7 +68,17 @@ export default defineConfig({
             },
             {
               text: "🔗 TinyURL",
-              link: "/blog/system-design/tiny-url",
+              link: "/blog/system-design/tiny-url/",
+              items: [
+                {
+                  text: "🔗 TinyURL - Monolithic",
+                  link: "/blog/system-design/tiny-url/monolithic/README",
+                },
+                {
+                  text: "🔗 TinyURL - Distributed",
+                  link: "/blog/system-design/tiny-url/distributed/README",
+                },
+              ],
             },
           ],
         },
