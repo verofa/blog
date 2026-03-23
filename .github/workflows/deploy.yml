@@ -66,6 +66,15 @@ jobs:
             cp -r "$image_dir"/* "docs/blog/system-design/$relative/"
           done
 
+          # Fix image paths in all copied markdown files
+          # Changes: images/file.jpg to /blog/system-design/tiny-url/distributed/images/file.jpg
+          find docs/blog/system-design -name "*.md" | while read file; do
+            relative="${file#docs/}"
+            dir=$(dirname $relative)
+            sed -i "s|](images/|](/$dir/images/|g" "$file"
+            sed -i "s|src=\"images/|src=\"/$dir/images/|g" "$file"
+          done
+
           echo "🦄 Copied markdown files:"
           find docs/blog/system-design -name "*.md"
 
