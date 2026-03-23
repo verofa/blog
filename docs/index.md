@@ -15,7 +15,7 @@ hero:
       link: https://github.com/verofa
 
 features:
-  - icon: 👻
+  - icon: 👾
     title: Terminal & Tools
     details: Ghostty, Fish shell, Starship, Neovim, eza and everything that makes your terminal a joy to use.
     link: /blog/terminal/

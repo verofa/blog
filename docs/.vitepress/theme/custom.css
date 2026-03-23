@@ -41,15 +41,15 @@
 /* ---- Adjust text sizes to fit one line ----- */
 /* These field values come from docs/index.md */
 .VPHero .name {
-  font-size: 3rem !important;
+  font-size: clamp(1.8rem, 5vw, 3rem) !important;
   line-height: 1.2 !important;
-  white-space: nowrap !important;
 }
 
 .VPHero .text {
-  font-size: 2rem !important;
+  /* font-size: clamp(MIN, PREFERRED, MAX) */
+  font-size: clamp(1.5rem, 3.5vw, 2rem) !important;
+  max-width: 100% !important;
   line-height: 1.3 !important;
-  white-space: nowrap !important;
 }
 
 .VPHero .tagline {
