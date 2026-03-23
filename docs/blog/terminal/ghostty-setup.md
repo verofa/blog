@@ -316,7 +316,7 @@ Cmd + Ctrl + F
 Now that you have the terminal, if you like it and want a functional, colorful, and fun development
 environment, the next step is:
 
-- 👾 [Complete the full Purple Terminal configuration](/blog/purple-terminal-setup)
+- 👾 [Complete the full Purple Terminal configuration](/blog/terminal/purple-terminal-setup)
 
 ---
 
