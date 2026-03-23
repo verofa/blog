@@ -16,14 +16,26 @@ hero:
 
 features:
   - icon: 👻
-    title: Ghostty
-    details: Deep dive into setting up a beautiful terminal with Ghostty with a purple twist.
-    link: /blog/ghostty-setup
-    linkText: Read more
+    title: Terminal & Tools
+    details: Ghostty, Fish shell, Starship, Neovim, eza and everything that makes your terminal a joy to use.
+    link: /blog/terminal/
+    linkText: Explore
 
-  - icon: 🚀
-    title: The Complete Purple Terminal Setup Guide
-    details: Step by step instructions to set up the full developer terminal environment on a fresh macOS machine. Neovim, Fish shell, Starship prompt and eza, all included!
-    link: /blog/purple-terminal-setup
-    linkText: Get started
+  - icon: ☁️
+    title: SRE / DevOps / Platform Engineering
+    details: Cloud tools, Kubernetes, Terraform, CI/CD pipelines, observability and production best practices.
+    link: /blog/devops/
+    linkText: Explore
+
+  - icon: 🏗️
+    title: System Design
+    details: Architecture diagrams, design decisions, tradeoffs and real world system design concepts explained simply.
+    link: /blog/system-design/
+    linkText: Explore
+
+  - icon: 💻
+    title: Coding
+    details: Programming tips, language deep dives, debugging stories and everything about writing better code.
+    link: /blog/coding/
+    linkText: Explore
 ---
