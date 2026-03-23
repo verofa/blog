@@ -59,8 +59,18 @@ jobs:
             cp "$file" "docs/blog/system-design/$relative"
           done
 
+          # Copy all images folders preserving structure
+          find /tmp/systems-design -type d -name "images" | while read image_dir; do
+            relative="${image_dir#/tmp/systems-design/}"
+            mkdir -p "docs/blog/system-design/$relative"
+            cp -r "$d/." "docs/blog/system-design/$relative/"
+          done
+
           echo "🦄 Copied markdown files:"
           find docs/blog/system-design -name "*.md"
+
+          echo "🦄 Copied image folders:"
+          find docs/blog/system-design -type d -name "images"
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
