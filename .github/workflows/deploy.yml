@@ -47,6 +47,8 @@ jobs:
         run: |
           git clone https://github.com/verofa/systems-design /tmp/systems-design
 
+          mkdir -p docs/blog/system-design
+
           # Copy root README as index
           cp /tmp/systems-design/README.md docs/blog/system-design/index.md
 
