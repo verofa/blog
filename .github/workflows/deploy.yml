@@ -36,10 +36,29 @@ jobs:
           ls -la /tmp/dotfiles
 
           echo "Copying SETUP.md..."
-          cp /tmp/dotfiles/SETUP.md docs/blog/terminal/purple-terminal-setup.md && echo " 🦄SETUP.md copied" || echo " 💩SETUP.md failed"
+          cp /tmp/dotfiles/SETUP.md docs/blog/terminal/purple-terminal-setup.md
+          echo "🦄 SETUP.md copied"
 
           echo "Listing docs folder..."
           ls -la docs/ ; ls -la docs/blog/
+
+      # --- NEW: Pull entire systems-design repo --
+      - name: Fetch docs from systems-design repo
+        run: |
+          git clone https://github.com/verofa/systems-design /tmp/systems-design
+
+          # Copy root README as index
+          cp /tmp/systems-design/README.md docs/blog/system-design/index.md
+
+          # Copy all markdown files EXCEPT the root README
+          find /tmp/systems-design -name "*.md" ! -path "/tmp/systems-design/README.md" | while read file; do
+            relative="${file#/tmp/systems-design/}"
+            mkdir -p "docs/blog/system-design/$(dirname $relative)"
+            cp "$file" "docs/blog/system-design/$relative"
+          done
+
+          echo "🦄 Copied markdown files:"
+          find docs/blog/system-design -name "*.md"
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
