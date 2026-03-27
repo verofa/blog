@@ -34,26 +34,26 @@ const C = {
 const SWATCHES = ['#1C2333', C.p9, C.p2, C.p3, C.p12, C.p5, C.p4, C.p15]
 
 const ASCII_LINES = [
-  { t: '                              ████████╗██╗  ██╗███████╗',                    c: C.p13 },
-  { t: '                                 ██╔══╝██║  ██║██╔════╝',                    c: C.p13 },
-  { t: '                                 ██║   ███████║█████╗  ',                    c: C.p13 },
-  { t: '                                 ██║   ██╔══██║██╔══╝  ',                    c: C.p13 },
-  { t: '                                 ██║   ██║  ██║███████╗',                    c: C.p13 },
-  { t: '                                 ╚═╝   ╚═╝  ╚═╝╚══════╝',                   c: C.p13 },
-  { t: '',                                                          c: C.dim },
-  { t: '                    ██████╗ ██╗   ██╗██████╗ ██████╗ ██╗     ███████╗',      c: C.p5  },
-  { t: '                    ██╔══██╗██║   ██║██╔══██╗██╔══██╗██║     ██╔════╝',      c: C.p5  },
-  { t: '                    ██████╔╝██║   ██║██████╔╝██████╔╝██║     █████╗  ',      c: C.p5  },
-  { t: '                    ██╔═══╝ ██║   ██║██╔══██╗██╔═══╝ ██║     ██╔══╝  ',      c: C.p5  },
-  { t: '                    ██║     ╚██████╔╝██║  ██║██║     ███████╗███████╗',      c: C.p5  },
-  { t: '                    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝╚══════╝',     c: C.p5  },
-  { t: '',                                                          c: C.dim },
-  { t: '                ████████╗███████╗██████╗ ███╗   ███╗██╗███╗  ██╗ █████╗ ██╗   ',  c: C.p4 },
-  { t: '                ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗ ██║██╔══██╗██║   ',  c: C.p4 },
-  { t: '                   ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗██║███████║██║   ',  c: C.p4 },
-  { t: '                   ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚████║██╔══██║██║   ',  c: C.p4 },
-  { t: '                   ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚███║██║  ██║█████╗',  c: C.p4 },
-  { t: '                   ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚══╝╚═╝  ╚═╝╚════╝', c: C.p4 },
+  { t: '                            ████████╗██╗  ██╗███████╗',                    c: C.p13 },
+  { t: '                               ██╔══╝██║  ██║██╔════╝',                    c: C.p13 },
+  { t: '                               ██║   ███████║█████╗  ',                    c: C.p13 },
+  { t: '                               ██║   ██╔══██║██╔══╝  ',                    c: C.p13 },
+  { t: '                               ██║   ██║  ██║███████╗',                    c: C.p13 },
+  { t: '                               ╚═╝   ╚═╝  ╚═╝╚══════╝',                   c: C.p13 },
+  { t: '',                                                        c: C.dim },
+  { t: '                  ██████╗ ██╗   ██╗██████╗ ██████╗ ██╗     ███████╗',      c: C.p5  },
+  { t: '                  ██╔══██╗██║   ██║██╔══██╗██╔══██╗██║     ██╔════╝',      c: C.p5  },
+  { t: '                  ██████╔╝██║   ██║██████╔╝██████╔╝██║     █████╗  ',      c: C.p5  },
+  { t: '                  ██╔═══╝ ██║   ██║██╔══██╗██╔═══╝ ██║     ██╔══╝  ',      c: C.p5  },
+  { t: '                  ██║     ╚██████╔╝██║  ██║██║     ███████╗███████╗',      c: C.p5  },
+  { t: '                  ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚══════╝╚══════╝',     c: C.p5  },
+  { t: '',                                                        c: C.dim },
+  { t: '              ████████╗███████╗██████╗ ███╗   ███╗██╗███╗  ██╗ █████╗ ██╗   ',  c: C.p4 },
+  { t: '              ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║████╗ ██║██╔══██╗██║   ',  c: C.p4 },
+  { t: '                 ██║   █████╗  ██████╔╝██╔████╔██║██║██╔██╗██║███████║██║   ',  c: C.p4 },
+  { t: '                 ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║██║╚████║██╔══██║██║   ',  c: C.p4 },
+  { t: '                 ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║██║ ╚███║██║  ██║█████╗',  c: C.p4 },
+  { t: '                 ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝╚═╝  ╚══╝╚═╝  ╚═╝╚════╝', c: C.p4 },
 ]
 
 const TPT_FRAMES = [
@@ -66,9 +66,10 @@ const TPT_FRAMES = [
 const TPT_COLS = [C.p5, C.p13, C.p4, C.p12, C.p1, C.p13, C.p5, C.p4]
 
 // -- Cleanup handles -------------------------------------------------
-let tptInterval = null
-let loopTimeout = null
-let destroyed   = false
+let tptInterval    = null
+let loopTimeout    = null
+let destroyed      = false
+let resizeObserver = null
 
 // -- Helpers ----------------------------------------------------------
 const sleep = ms => new Promise(r => setTimeout(r, ms))
@@ -128,7 +129,7 @@ function makeSwatchRow(indent) {
   return d
 }
 
-function makeGhostFull(parent) {
+function makeTptFull(parent) {
   const col   = TPT_COLS[0]
   const frame = TPT_FRAMES[0]
   const rows  = [
@@ -179,7 +180,7 @@ function measureFinalHeight() {
   for (const { t, c } of ASCII_LINES) {
     const d = document.createElement('div')
     d.className = 'pt-line'
-    d.style.fontSize   = '11px'
+    d.style.fontSize   = '0.85em'
     d.style.lineHeight = '1.22'
     d.style.color = c
     d.textContent = t
@@ -206,10 +207,10 @@ function measureFinalHeight() {
   l2.appendChild(cs2)
   probe.appendChild(l2)
 
-  const ghost = document.createElement('div')
-  ghost.style.marginTop = '8px'
-  makeGhostFull(ghost)
-  probe.appendChild(ghost)
+  const tpt = document.createElement('div')
+  tpt.style.marginTop = '8px'
+  makeTptFull(tpt)
+  probe.appendChild(tpt)
 
   const h = probe.offsetHeight
   document.body.removeChild(probe)
@@ -261,7 +262,7 @@ async function run() {
   await sleep(700)
   if (destroyed) return
   cur1.className = 'pt-cursor'
-  await typeInto('cmd1', 'tpt "The Purple Terminal"', 68)
+  await typeInto('cmd1', 'tpt "Welcome to The Purple Terminal"', 68)
   if (destroyed) return
   cur1.remove()
   await sleep(320)
@@ -270,7 +271,7 @@ async function run() {
     if (destroyed) return
     const d = document.createElement('div')
     d.className    = 'pt-line'
-    d.style.fontSize   = '11px'
+    d.style.fontSize   = '0.85em'
     d.style.lineHeight = '1.22'
     d.style.color  = c
     d.textContent  = t
@@ -330,17 +331,24 @@ async function run() {
 // -- Lifecycle --------------------------------------------------------
 onMounted(() => {
   destroyed = false
-  // Measure after mount so the DOM has real dimensions
   const h = measureFinalHeight()
   screenRef.value.style.height = h + 'px'
   run()
+
+  // Recalculate height when the container is resized (e.g. phone rotation)
+  resizeObserver = new ResizeObserver(() => {
+    if (screenRef.value && contentRef.value) {
+      screenRef.value.style.height = measureFinalHeight() + 'px'
+    }
+  })
+  resizeObserver.observe(screenRef.value)
 })
 
 onUnmounted(() => {
-  // Clean up timers so they don't run after the component is gone
   destroyed = true
   clearInterval(tptInterval)
   clearTimeout(loopTimeout)
+  resizeObserver?.disconnect()
 })
 </script>
 
@@ -458,5 +466,34 @@ onUnmounted(() => {
   display: inline-block;
   margin-right: 3px;
   vertical-align: middle;
+}
+
+/* -- Responsive scaling ------------------------------------------- */
+@media (max-width: 768px) {
+  .pt-root {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pt-root {
+    font-size: 7.5px;
+    border-radius: 8px;
+  }
+  .pt-titlebar {
+    padding: 8px 12px;
+  }
+  :deep(.pt-tpt-frame) {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pt-root {
+    font-size: 6px;
+  }
+  :deep(.pt-tpt-frame) {
+    font-size: 7px;
+  }
 }
 </style>

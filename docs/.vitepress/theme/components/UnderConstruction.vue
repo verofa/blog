@@ -18,7 +18,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 const screenRef  = ref(null)
 const contentRef = ref(null)
 
-// -- Colors — same tptty config palette ----------------------------
+// -- Colors — same Ghostty config palette ----------------------------
 const C = {
   fg:  '#C0C0C0', cursor: '#f95470',
   p1:  '#ef919b', p2:  '#00E676',
@@ -40,7 +40,7 @@ const TPT_FRAMES = [
   { eyes: '◉       ◉', mouth: '   ▄▄▄▄▄  ', bottom: '▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄' },
   { eyes: '-       -', mouth: '          ', bottom: '▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀' },
 ]
-const tpt_COLS = [C.p5, C.p13, C.p9, C.p12, C.p1, C.p13, C.p5, C.p4]
+const TPT_COLS = [C.p5, C.p13, C.p9, C.p12, C.p1, C.p13, C.p5, C.p4]
 
 // -- The TODO items that "break" the tpt ---------------------------
 const TODO_LINES = [
@@ -54,9 +54,10 @@ const TODO_LINES = [
 ]
 
 // -- Cleanup handles --------------------------------------------------
-let tptInterval = null
-let loopTimeout   = null
-let destroyed     = false
+let tptInterval  = null
+let loopTimeout    = null
+let destroyed      = false
+let resizeObserver = null
 
 // -- Helpers ----------------------------------------------------------
 const sleep = ms => new Promise(r => setTimeout(r, ms))
@@ -116,8 +117,8 @@ function makeSwatchRow(indent) {
   return d
 }
 
-function maketptFull(parent, frameIdx = 0) {
-  const col   = tpt_COLS[frameIdx % tpt_COLS.length]
+function makeTptFull(parent, frameIdx = 0) {
+  const col   = TPT_COLS[frameIdx % TPT_COLS.length]
   const frame = TPT_FRAMES[frameIdx % TPT_FRAMES.length]
   const rows  = [
     '      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄',
@@ -193,7 +194,7 @@ function measureFinalHeight() {
 
   const tpt = document.createElement('div')
   tpt.style.marginTop = '8px'
-  maketptFull(tpt, 0)
+  makeTptFull(tpt, 0)
   probe.appendChild(tpt)
 
   // Scene 3 — reassurance
@@ -230,7 +231,7 @@ async function run() {
 
   function drawtpt() {
     if (!tptEl) return
-    const col   = tpt_COLS[gf % tpt_COLS.length]
+    const col   = TPT_COLS[gf % TPT_COLS.length]
     const frame = TPT_FRAMES[gf % TPT_FRAMES.length]
     const rows  = [
       '      ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄',
@@ -345,7 +346,7 @@ async function run() {
   await sleep(500)
   if (destroyed) return
 
-  // Loop
+ // Loop
   loopTimeout = setTimeout(() => {
     clearInterval(tptInterval)
     tptInterval = null
@@ -359,12 +360,21 @@ onMounted(() => {
   const h = measureFinalHeight()
   screenRef.value.style.height = h + 'px'
   run()
+
+  // Recalculate height when the container is resized (e.g. phone rotation)
+  resizeObserver = new ResizeObserver(() => {
+    if (screenRef.value && contentRef.value) {
+      screenRef.value.style.height = measureFinalHeight() + 'px'
+    }
+  })
+  resizeObserver.observe(screenRef.value)
 })
 
 onUnmounted(() => {
   destroyed = true
   clearInterval(tptInterval)
   clearTimeout(loopTimeout)
+  resizeObserver?.disconnect()
 })
 </script>
 
@@ -478,5 +488,34 @@ onUnmounted(() => {
   display: inline-block;
   margin-right: 3px;
   vertical-align: middle;
+}
+
+/* -- Responsive scaling ------------------------------------------- */
+@media (max-width: 768px) {
+  .pt-root {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pt-root {
+    font-size: 7.5px;
+    border-radius: 8px;
+  }
+  .pt-titlebar {
+    padding: 8px 12px;
+  }
+  :deep(.pt-tpt-frame) {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 360px) {
+  .pt-root {
+    font-size: 6px;
+  }
+  :deep(.pt-tpt-frame) {
+    font-size: 7px;
+  }
 }
 </style>
