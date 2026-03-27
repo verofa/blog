@@ -9,6 +9,8 @@ In this post I'll walk you through how I set up **[Ghostty]** (a fast, modern te
 with a custom purple theme, transparency effects, and all the tweaks that make it a joy to use
 every day.
 
+![Ghostty boo](/ghostty-setup/ghostty-boo.png)
+
 ## 🤔 Why Ghostty?
 
 There are a lot of terminal emulators out there e.g., **iTerm2**, **Alacritty**, **Warp**, **Kitty**.
@@ -313,8 +315,8 @@ Cmd + Ctrl + F
 
 ## 🔗 What's Next?
 
-Now that you have the terminal, if you like it and want a functional, colorful, and fun development
-environment, the next step is:
+Now that you have the Ghostty terminal emulator install and want to enjoy of more productive , functional,
+colorful, and fun development environment, the next step is:
 
 - 👾 [Complete the full Purple Terminal configuration](/blog/terminal/purple-terminal-setup)
 

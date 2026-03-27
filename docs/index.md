@@ -8,7 +8,7 @@ hero:
   tagline: "🦄 Writing about DevOps, SRE, terminal hacks, tools and everything I learn along the way 👩🏽‍💻"
   actions:
     - theme: brand
-      text: 📝 Read the Blog
+      text: 🗿 🥚
       link: /blog/
     - theme: alt
       text: ⭐ GitHub
