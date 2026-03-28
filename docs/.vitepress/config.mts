@@ -14,6 +14,14 @@ export default defineConfig({
 
   // ── Head  ──
   head: [
+    [
+      "link",
+      {
+        rel: "icon",
+        type: "image/svg+xml",
+        href: "/blog/favicon.svg",
+      },
+    ],
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     [
       "link",
